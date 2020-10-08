@@ -83,12 +83,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             data.forEach((user) => {
                 const { userId, id, title, body} = user
                 console.log(body);
-                    let posts =
-                    `<ul>
+                    let posts=document.createElement('ul'); 
+                    posts.innerHtml =`
                         <li> Title : ${title}</li>
                         <li> Content : ${body} </li>
-                         </ul>
-                      </div>`;
+                         
+                      `;
                       postsh.appendChild(posts);
                     });
                 });
