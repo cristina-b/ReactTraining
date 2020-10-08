@@ -8,10 +8,12 @@
     <body>
         <h1><time id="time">00:00:00</time></h1>
         <div id="history"></div>
-        <button id="start">start</button>
-        <button id="stop">stop</button>
-        <button id="reset">reset</button>  
-        <button id="lap">lap</button> 
-        <script type="text/javascript" src="stopWatch.js"></script>
+        <div class="stopwatch"></div>
+        <ul class="results"></ul>
+        <button id="start" onClick="stopwatch.start();">start</button>
+        <button id="stop" onClick="stopwatch.stop();">stop</button>
+        <button id="reset" onClick="stopwatch.reset();">reset</button>  
+        <button id="lap" onClick="stopwatch.lap();">lap</button> 
+        <script type="text/javascript" src="stopWatch2.js"></script>
     </body>
 </html>

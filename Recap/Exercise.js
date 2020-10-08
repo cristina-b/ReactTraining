@@ -86,8 +86,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                     let posts=document.createElement('ul'); 
                     posts.innerHtml =`
                         <li> Title : ${title}</li>
-                        <li> Content : ${body} </li>
-                         
+                        <li> Content : ${body} </li>                         
                       `;
                       postsh.appendChild(posts);
                     });
