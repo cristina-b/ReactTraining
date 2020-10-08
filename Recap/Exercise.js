@@ -42,10 +42,16 @@ console.log(capitalize(sentence));
 
 //Write a JavaScript program to create an object composed of the properties the given function returns falsey for. 
 //The function is invoked with two arguments: (value, key)
-//const falsey = (value, key) => 
+const falsey = (obj, fnc) => Object.keys(obj)
+                                .filter(k => fnc(obj[k], k))
+                                .reduce((acc, k) => ((acc[k] = obj[k]), acc), {}); //flatten
+
+console.log(falsey(user, v => v  == 123));
+
 //Write a JavaScript program that takes a predicate and array, like Array.filter(), but only keeps x if pred(x) === false.
-const falsey2 = (predicate, arr3) => arr3.filter((x) => !predicate(x));
+const falsey2 = (predicate, arr3) => arr3.filter(x => !predicate(x));
 console.log(falsey2(x => x > 5, [1,3,5,7,9]));
+
 //Write a JavaScript program to redirect to a specified URL
 const redirect = url => window.location.assign(url);
 redirect("http://ceva/com");
