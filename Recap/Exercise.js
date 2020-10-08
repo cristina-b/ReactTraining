@@ -47,8 +47,8 @@ console.log(capitalize(sentence));
 const falsey2 = (predicate, arr3) => arr3.filter((x) => !predicate(x));
 console.log(falsey2(x => x > 5, [1,3,5,7,9]));
 //Write a JavaScript program to redirect to a specified URL
-//const redirect = url => window.location.assign(url);
-//redirect("http://ceva/com");
+const redirect = url => window.location.assign(url);
+redirect("http://ceva/com");
 //Write a JavaScript program to chunk an array into smaller arrays of a specified size.
 const chunkArray = (arr, chunk) => arr.length ? [arr.slice(0, chunk), ...chunkArray(arr.slice(chunk), chunk)] : [];
 console.log(chunkArray([1,2,3,4,5,6,7], 2));
