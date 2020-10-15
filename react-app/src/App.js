@@ -3,10 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 //import Home from './modules/Home';
 import User from './components/User';
-import Nav from './components/Nav';
+import Nav from './components/Navbar';
 import Messages from './components/Messages';
 import Dropdown from './components/Dropdown';
 import Courses from './components/Courses';
+import Navbar from './components/Navbar';
 
 function App() {
   const section = 'Inbox';
@@ -21,8 +22,10 @@ function App() {
         <Messages type={section}/>
       </div>
       <Dropdown/>*/}
+      
+      <Navbar/>
       <Courses/>        
-      <User theColor={'red'} firstname = {'developer'} image={logo} alt="logo"/>
+      <User theColor={'red'} firstname = {'developer'} image={logo} bootcamp = {'Ironhack'} alt="logo"/>
     </div>
   );
 }
