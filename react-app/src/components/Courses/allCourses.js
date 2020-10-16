@@ -4,8 +4,8 @@ const AllCourses = (props) => {
     const {courses} =  props;
    
 return (<ul>
-          {courses.map((x) => (
-            <li key={x.courseName}>Course name: {x.courseName}</li>
+          {courses.map((x, k) => (
+            <li key={k}>Course name: {x}</li>
           ))}
         </ul>);
     };

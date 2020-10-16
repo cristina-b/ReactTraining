@@ -11,8 +11,7 @@ const Courses = () => {
     }
        
     const addToCourseList = () => {
-      let allCourses = courses.concat( {courseName} );      
-      setCourseList(allCourses);
+      setCourseList([...courses, courseName]);
     }
    
     const resetCourses = () => {
