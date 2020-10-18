@@ -1,0 +1,65 @@
+.dd-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.dd-header {
+  position: relative;
+  height: 40px;
+  background-color: #e2e8f2;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  border: 1px solid #3d70b2;
+  border-bottom-width: 0;
+  padding-right: 3em;
+}
+
+.dd-header::before {
+  position: absolute;
+  content: "\25B4";
+  right: 0;
+  text-align: center;
+  line-height: 40px;
+  width: 1em;
+  top: 0;
+  bottom: 0;
+  font-size: 2em;
+}
+
+.dd-list {
+  list-style-type: none;
+  background-color: white;
+  position: absolute;
+  border: 1px solid #3d70b2;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+.dd-list li {
+  vertical-align: middle;
+  padding: 1em;
+}
+
+.dd-list li:hover {
+  background-color: #eee;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+}
+
+.dd-closed > .dd-header::before {
+  content: "\25BE";
+  float: right;
+}
+.dd-closed > .dd-header {
+  border-bottom-width: 1px;
+}
+.dd-closed > .dd-list {
+  display: none;
+}
