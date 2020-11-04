@@ -1,13 +1,11 @@
 // dependencies
 import React from 'react';
-import { render, fireEvent, screen, getByDisplayValue } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 
 // components
 import Signup from './signup';
 
 describe('<Signup />', () => {
-
-
 
     it('should have a `<form>` element', () => {
         const { getByText } = render(<Signup />);
@@ -16,7 +14,7 @@ describe('<Signup />', () => {
     });
 
 
-    it("Empty input validations are working ", () => {
+    it("Empty input validations are triggering errors ", () => {
 
         const mockSubmit = jest.fn();
         const { queryByTestId } = render(<Signup handleSubmit={mockSubmit} />);
